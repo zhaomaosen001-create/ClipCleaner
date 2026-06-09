@@ -22,13 +22,16 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Build macOS package
         run: |
           chmod +x scripts/build_mac.sh
           ./scripts/build_mac.sh
+
       - uses: actions/upload-artifact@v4
         with:
           name: ClipCleaner-macOS
@@ -37,6 +40,7 @@ jobs:
             dist/ClipCleaner-macOS.zip
 
   build-windows:
+    if: github.event_name == 'push' || github.event.inputs.platform == 'all' || github.event.inputs.platform == 'windows'
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,6 +55,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install Pillow pyinstaller
 
-      - name: Run PyInstaller directly
+      - name: Run PyInstaller
         run: |
           pyinstaller --onefile --windowed --name ClipCleaner main.py
+
+      # 关键：上传打包好的 exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ClipCleaner-Windows
+          path: dist/ClipCleaner.exe
