@@ -1,0 +1,12 @@
+# ClipCleaner 核心依赖
+PyQt5>=5.15.0
+requests>=2.28.0
+urllib3>=1.26.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# 腾讯妙思浏览器抓取（首次需执行 playwright install chromium）
+playwright>=1.40.0
+
+# 打包
+pyinstaller>=6.0.0

@@ -1,0 +1,251 @@
+/* ClipCleaner 工具面板风格 */
+
+QWidget {
+    font-family: "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color: #2c3e50;
+}
+
+QMainWindow {
+    background-color: #f5f6fa;
+}
+
+QLineEdit {
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: white;
+    color: #2c3e50;
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    border-color: #3498db;
+}
+
+QLabel#urlHint {
+    color: #5d6d7e;
+    font-size: 12px;
+    padding: 0 2px 4px 2px;
+    line-height: 1.4;
+}
+
+QTextEdit#urlInput {
+    background: #ffffff;
+    color: #2c3e50;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    selection-background-color: #d6eaf8;
+    selection-color: #2c3e50;
+}
+
+QTextEdit#urlInput:focus {
+    border-color: #3498db;
+}
+
+QPushButton {
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #2c3e50;
+    font-size: 13px;
+    min-height: 28px;
+}
+
+QPushButton:hover {
+    background: #ecf0f1;
+}
+
+QPushButton#btnDownload {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+QPushButton#btnDownload:hover {
+    background-color: #2980b9;
+}
+
+QPushButton#btnDownload:disabled {
+    background-color: #bdc3c7;
+}
+
+QPushButton#btnStart {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    font-weight: bold;
+    min-width: 88px;
+}
+
+QPushButton#btnStart:hover {
+    background-color: #219a52;
+}
+
+QPushButton#btnStart:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+QPushButton#btnSettings {
+    color: #2c3e50;
+    min-width: 64px;
+    padding: 8px 12px;
+}
+
+QPushButton#btnSettings:hover {
+    background: #ecf0f1;
+    border-color: #3498db;
+}
+
+QPushButton#btnTableAction {
+    padding: 4px 10px;
+    min-width: 44px;
+    font-size: 12px;
+}
+
+QTableWidget#fileTable {
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #2c3e50;
+    gridline-color: #ecf0f1;
+    selection-background-color: #d6eaf8;
+    selection-color: #2c3e50;
+}
+
+QCheckBox#rowCheckBox {
+    margin: 0;
+    padding: 0;
+}
+
+QCheckBox#rowCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #7f8c8d;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+QCheckBox#rowCheckBox::indicator:hover {
+    border-color: #3498db;
+}
+
+QCheckBox#rowCheckBox::indicator:checked {
+    background-color: #ffffff;
+    border-color: #3498db;
+}
+
+QTableWidget#fileTable QTableCornerButton::section {
+    background-color: #34495e;
+    border: none;
+}
+
+QTableWidget#fileTable QHeaderView::section:horizontal {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableWidget#fileTable QHeaderView::section:vertical {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: none;
+}
+
+QHeaderView::section {
+    background: #34495e;
+    color: white;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+QGroupBox {
+    font-weight: bold;
+    color: #2c3e50;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    margin-top: 12px;
+    padding-top: 16px;
+    background: white;
+}
+
+QLabel {
+    color: #2c3e50;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 6px;
+    color: #2c3e50;
+}
+
+QProgressBar {
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    text-align: center;
+    height: 20px;
+    color: #2c3e50;
+    background: #ffffff;
+}
+
+QProgressBar::chunk {
+    background-color: #3498db;
+    border-radius: 3px;
+}
+
+QTextEdit#logView {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    border: none;
+}
+
+QMenuBar {
+    background: #34495e;
+    color: white;
+}
+
+QMenuBar::item:selected {
+    background: #2c3e50;
+}
+
+QMenu {
+    background: white;
+    border: 1px solid #dcdde1;
+    color: #2c3e50;
+}
+
+QMessageBox {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+QMessageBox QLabel {
+    color: #2c3e50;
+    min-width: 280px;
+}
+
+QTabWidget::pane {
+    border: 1px solid #dcdde1;
+    background: white;
+}
+
+QTabBar::tab {
+    padding: 8px 16px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: white;
+    border-bottom: 2px solid #3498db;
+}

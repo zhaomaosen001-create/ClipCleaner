@@ -1,0 +1,25 @@
+"""PyInstaller hiddenimports 列表（build.spec / build_mac.spec 共用）."""
+
+HIDDEN_IMPORTS = [
+    "clipcleaner",
+    "clipcleaner.paths",
+    "clipcleaner.config",
+    "clipcleaner.utils",
+    "clipcleaner.api_resolver",
+    "clipcleaner.api_providers",
+    "clipcleaner.platform_parsers",
+    "clipcleaner.url_finder",
+    "clipcleaner.url_extractor",
+    "clipcleaner.admuse_scraper",
+    "clipcleaner.playwright_bootstrap",
+    "clipcleaner.core.models",
+    "clipcleaner.core.batch_queue",
+    "clipcleaner.download.image_note",
+    "clipcleaner.icon_utils",
+    "clipcleaner.icon_generator",
+    "clipcleaner.downloader",
+    "clipcleaner.workers",
+    "clipcleaner.gui.main_window",
+    "clipcleaner.gui.dialogs",
+    "clipcleaner.gui.check_toggle",
+]
