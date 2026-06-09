@@ -13,7 +13,7 @@ on:
           - windows
           - macos
   push:
-    tags:
+标签:
       - "v*"
 
 jobs:
@@ -37,18 +37,21 @@ jobs:
             dist/ClipCleaner-macOS.zip
 
   build-windows:
-    if: github.event_name == 'push' || github.event.inputs.platform == 'all' || github.event.inputs.platform == 'windows'
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - name: Build Windows package
+          python-version: "3.11"  # 和你项目一致
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install Pillow
+          python -m pip install pyinstaller
+
+      - name: Run build script
         run: scripts\build_windows.bat
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ClipCleaner-Windows
-          path: |
-            dist/ClipCleaner.exe
-            dist/ClipCleaner-Windows.zip
