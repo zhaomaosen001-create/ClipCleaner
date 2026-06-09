@@ -13,7 +13,7 @@ on:
           - windows
           - macos
   push:
-标签:
+    tags:
       - "v*"
 
 jobs:
@@ -39,19 +39,13 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"  # 和你项目一致
-
+          python-version: "3.11"
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install Pillow
-          python -m pip install pyinstaller
-
+          python -m pip install Pillow pyinstaller
       - name: Run build script
         run: scripts\build_windows.bat
